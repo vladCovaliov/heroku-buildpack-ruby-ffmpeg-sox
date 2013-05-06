@@ -1,7 +1,11 @@
 Heroku buildpack: Ruby
 ======================
+This is a fork of the [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Ruby, Rack, and Rails apps. It uses [Bundler](http://gembundler.com) for dependency management.
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Ruby, Rack, and Rails apps. It uses [Bundler](http://gembundler.com) for dependency management.
+This fork downloads versions of [ffmpeg] (http://www.ffmpeg.org/) and [sox] (http://sox.sourceforge.net/) and extracts them to subdirectories under /app/vendor.  It adds corresponding directories to the  PATH and LD_LIBRARY_PATH environment variables.
+
+This fork also downloads [aws] (http://aws.amazon.com/developertools/Amazon-S3/739), a handy command-line tool for accessing Amazon EC2 and S3.  That tool is not added to the PATH.
+
 
 Usage
 -----
