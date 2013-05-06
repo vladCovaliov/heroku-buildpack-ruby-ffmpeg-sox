@@ -112,6 +112,10 @@ private
     "vendor/#{ruby_version}"
   end
 
+  def slug_vendor_directory
+    "vendor"
+  end
+
   # the relative path to the vendored jvm
   # @return [String] resulting path
   def slug_vendor_jvm
@@ -213,6 +217,8 @@ private
     set_env_override "GEM_PATH", "$HOME/#{slug_vendor_base}:$GEM_PATH"
     set_env_default  "LANG",     "en_US.UTF-8"
     set_env_override "PATH",     "$HOME/bin:$HOME/#{slug_vendor_base}/bin:$PATH"
+    set_env_override "PATH",     "$HOME/#{slug_vendor_directory}/ffmpeg/bin:$HOME/#{slug_vendor_directory}/sox/bin:$PATH"
+    set_env_override "LD_LIBRARY_PATH", "$HOME/#{slug_vendor_directory}/ffmpeg/lib:$HOME/#{slug_vendor_directory}/sox/lib:$LD_LIBRARY_PATH"
 
     if ruby_version_jruby?
       set_env_default "JAVA_OPTS", default_java_opts
