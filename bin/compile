@@ -36,7 +36,3 @@ system('echo "       Downloading and setting up vim."')
 system("cd #{vendor_dir} && curl https://s3.amazonaws.com/heroku-jvm-buildpack-vi/vim-7.3.tar.gz -s -O")
 system("tar zxpf #{vendor_dir}/vim-7.3.tar.gz -C #{vendor_dir}")
 system("rm #{vendor_dir}/vim-7.3.tar.gz")
-
-system (
-curl https://s3.amazonaws.com/heroku-jvm-buildpack-vi/vim-7.3.tar.gz --output vim.tar.gz
-mkdir vim && tar xzvf vim.tar.gz -C vim
