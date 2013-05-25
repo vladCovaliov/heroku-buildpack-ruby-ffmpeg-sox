@@ -21,23 +21,23 @@ end
 vendor_dir = ARGV[0] + '/vendor'
 
 system('echo "-----> Downloading and setting up 3rd party programs"')
-
+  
 system('echo "       Downloading and setting up aws."')
-system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-programs/aws.tar.gz -s -O")
+system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-install-files/programs/aws.tar.gz -s -O")
 system("tar zxpf #{vendor_dir}/aws.tar.gz -C #{vendor_dir}")
 system("rm #{vendor_dir}/aws.tar.gz")
 
 system('echo "       Downloading and setting up ffmpeg."')
-system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-programs/ffmpeg.tar.gz -s -O")
+system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-install-files/programs/ffmpeg.tar.gz -s -O")
 system("tar zxpf #{vendor_dir}/ffmpeg.tar.gz -C #{vendor_dir}")
 system("rm #{vendor_dir}/ffmpeg.tar.gz")
 
 system('echo "       Downloading and setting up sox."')
-system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-programs/sox.tar.gz -s -O")
+system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-install-files/programs/sox.tar.gz -s -O")
 system("tar zxpf #{vendor_dir}/sox.tar.gz -C #{vendor_dir}")
 system("rm #{vendor_dir}/sox.tar.gz")
 
 system('echo "       Downloading and setting up vim."')
-system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-programs/vim.tar.gz -s -O")
+system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-install-files/programs/vim.tar.gz -s -O")
 system("tar zxpf #{vendor_dir}/vim.tar.gz -C #{vendor_dir}")
 system("rm #{vendor_dir}/vim.tar.gz")
