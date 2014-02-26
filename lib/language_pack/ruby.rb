@@ -156,6 +156,10 @@ private
     "vendor"
   end
 
+  def slug_vendor_directory
+    "vendor"
+  end
+
   # the relative path to the vendored jvm
   # @return [String] resulting path
   def slug_vendor_jvm
