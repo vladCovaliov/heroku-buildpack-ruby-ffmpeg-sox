@@ -41,3 +41,8 @@ system('echo "       Downloading and setting up vim."')
 system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-install-files/programs/vim.tar.gz -s -O")
 system("tar zxpf #{vendor_dir}/vim.tar.gz -C #{vendor_dir}")
 system("rm #{vendor_dir}/vim.tar.gz")
+
+system('echo "       Downloading custom fonts."')
+system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-install-files/fonts/fonts.tar.gz -s -O")
+system("tar zxpf #{vendor_dir}/fonts.tar.gz -C #{vendor_dir}")
+system("rm #{vendor_dir}/fonts.tar.gz")
