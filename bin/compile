@@ -47,7 +47,7 @@ system("cd #{vendor_dir} && curl https://s3.amazonaws.com/wevue-install-files/fo
 system("tar zxpf #{vendor_dir}/fonts.tar.gz -C #{vendor_dir}")
 system("rm #{vendor_dir}/fonts.tar.gz")
 
-system('echo "       Downloading youtube-dl."')
+system('echo "       Downloading and setting up youtube-dl."')
 system("cd #{vendor_dir} && curl https://s3-us-west-2.amazonaws.com/tol-heroku-buildpack/youtube-dl.tar.gz -s -O")
 system("tar zxpf #{vendor_dir}/youtube-dl.tar.gz -C #{vendor_dir}")
 system("rm #{vendor_dir}/youtube-dl.tar.gz")
